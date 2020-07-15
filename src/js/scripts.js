@@ -301,8 +301,21 @@ var fetchmovelist = function fetchmovelist(index) {
 				}
 				html_string +="</td></tr>";
             }
-            // Start F
-			html_string += "<table class=\"move-frames\">"+
+            
+			// Block F
+			html_string += "<tr class=\"move-blockf\"><td class=\"mv-id\">Block</td><td class=\"mv-frames "+(data.moves[i].blk>-1?"blkpositive\">+":data.moves[i].blk<-10?"blknegative\">":"blkmild\">")+data.moves[i].blk+"</td></tr>";
+			// Hit Adv F
+			html_string += "<tr class=\"move-hitf\"><td class=\"mv-id\">Hit</td>"+"<td class=\"mv-frames\">"
+				+(data.moves[i].adv>0?"+"+data.moves[i].adv:data.moves[i].adv)+"</td></tr></table>";
+			html_string += "</div>";
+			// ----- mv section
+
+			html_string += "</div></td>";
+
+			d3.select(".move-table").append("tr").html(html_string);
+        }
+        // Start F
+			html_string += "<table class=\"move-test\">"+
             "<tr class=\"move-startf\"><td class=\"mv-id\">Start</td><td class=\"mv-frames\">"+
             data.moves[i].s+"F</td></tr>";
             //Start Frames Segmented
@@ -315,18 +328,6 @@ var fetchmovelist = function fetchmovelist(index) {
                 }
                 html_string +="</td></tr>";
             }
-			// Block F
-			html_string += "<tr class=\"move-blockf\"><td class=\"mv-id\">Block</td><td class=\"mv-frames "+(data.moves[i].blk>-1?"blkpositive\">+":data.moves[i].blk<-10?"blknegative\">":"blkmild\">")+data.moves[i].blk+"</td></tr>";
-			// Hit Adv F
-			html_string += "<tr class=\"move-hitf\"><td class=\"mv-id\">Hit</td>"+"<td class=\"mv-frames\">"
-				+(data.moves[i].adv>0?"+"+data.moves[i].adv:data.moves[i].adv)+"</td></tr></table>";
-			html_string += "</div>";
-			// ----- mv section
-
-			html_string += "</div></td>";
-
-			d3.select(".move-table").append("tr").html(html_string);
-		}
 
 		for(var m=1; m<=mov_count; m++){
 			var moveid = m;
