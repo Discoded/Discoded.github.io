@@ -273,7 +273,8 @@ var fetchmovelist = function fetchmovelist(index) {
 					html_string += "+";
 			}
 			html_string += "</div></div></div></div></div>";
-
+            // extra section
+			html_string += "<div class=\"move-test\"><div class=\"mv-test1\"><div class=\"move-test2\">";
 			// extra section
 			html_string += "<div class=\"move-extra\"><div class=\"mv-section\"><div class=\"move-special\">";
 
@@ -314,20 +315,6 @@ var fetchmovelist = function fetchmovelist(index) {
 
 			d3.select(".move-table").append("tr").html(html_string);
         }
-        // Start F
-			html_string += "<table class=\"move-test\">"+
-            "<tr class=\"move-startf\"><td class=\"mv-id\">Start</td><td class=\"mv-frames\">"+
-            data.moves[i].s+"F</td></tr>";
-            //Start Frames Segmented
-            if(data.moves[i].s > 0 ){
-                html_string += "<tr class=\"move-startf-seg\"><td>"+data.moves[i].s+"F = ";
-                for(var sfs=1; sfs<data.moves[i].ss.length; sfs++){
-                    html_string += data.moves[i].ss[sfs].s;
-                    if( sfs+1 < data.moves[i].ss.length )
-                        html_string += "+";
-                }
-                html_string +="</td></tr>";
-            }
 
 		for(var m=1; m<=mov_count; m++){
 			var moveid = m;
