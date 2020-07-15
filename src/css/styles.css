@@ -636,6 +636,11 @@ div.move-hitlvlstring::-webkit-scrollbar {
   margin-left: 4px;
   margin-right: 4px; }
 
+.move-test {
+    height: 100%;
+    display: table;
+}
+
 .move-extra {
   height: 100%;
   display: table; }
