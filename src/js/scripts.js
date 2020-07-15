@@ -276,7 +276,7 @@ var fetchmovelist = function fetchmovelist(index) {
             
             // extra section
             html_string += "<div class=\"move-test\"><div class=\"mv-test1\"><div class=\"move-test2\">";
-            html_string += "</div></div></div></div></div></td>";
+            html_string += "</div></div></div></div></div></div></td>";
 			// extra section
 			html_string += "<div class=\"move-extra\"><div class=\"mv-section\"><div class=\"move-special\">";
 
