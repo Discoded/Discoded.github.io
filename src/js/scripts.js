@@ -272,10 +272,11 @@ var fetchmovelist = function fetchmovelist(index) {
 				if( d+1 < data.moves[i].ds.length )
 					html_string += "+";
 			}
-			html_string += "</div></div></div></div></div>";
+            html_string += "</div></div></div></div></div>";
+            
             // extra section
             html_string += "<div class=\"move-test\"><div class=\"mv-test1\"><div class=\"move-test2\">";
-            html_string += "</div>";
+            html_string += "</div></div></div></div>";
 			// extra section
 			html_string += "<div class=\"move-extra\"><div class=\"mv-section\"><div class=\"move-special\">";
 
