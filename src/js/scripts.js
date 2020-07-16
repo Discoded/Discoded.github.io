@@ -272,7 +272,7 @@ var fetchmovelist = function fetchmovelist(index) {
 				if( d+1 < data.moves[i].ds.length )
 					html_string += "+";
 			}
-            html_string += "</div></div></div></div>";
+            html_string += "</div></div></div></div></div>";
             
             
 			// extra section
